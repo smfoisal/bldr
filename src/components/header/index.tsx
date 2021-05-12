@@ -1,28 +1,21 @@
 import { Pane, Heading } from "evergreen-ui";
-
+import { Container } from "../root";
 const Header = () => (
   <Pane
+    padding={16}
+    height={56}
+    maxHeight={56}
+    flex={1}
+    alignItems="center"
     display="flex"
-    background="tint2"
-    borderRadius={0}
-    width={"100%"}
-    height={"100vh"}
+    elevation={1}
+    justifyContent={"center"}
   >
-    <Pane
-      padding={16}
-      height={48}
-      flex={1}
-      alignItems="center"
-      display="flex"
-      elevation={1}
-      justifyContent={"center"}
-    >
-      <Pane flex={1} display={"flex"} maxWidth={1440}>
-        <Heading size={400} textTransform={"uppercase"}>
-          Bldr
-        </Heading>
-      </Pane>
-    </Pane>
+    <Container>
+      <Heading fontWeight={500} textTransform={"uppercase"}>
+        Bldr
+      </Heading>
+    </Container>
   </Pane>
 );
 

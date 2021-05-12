@@ -23,16 +23,6 @@ export const GlobalStyle = createGlobalStyle`\
     margin: 0;
     font-size: 0.875rem;
   }
-
-  h1, h2, h3, h4, h5, h6 {
-    margin-top: 0;
-    margin-bottom: 8px;
-  }
-
-  main, section {
-    display: flex;
-    flex-direction: column;
-  }
 `;
 
 export default GlobalStyle;
