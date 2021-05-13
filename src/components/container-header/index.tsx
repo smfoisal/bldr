@@ -4,7 +4,11 @@ import { Container } from "../root";
 const ContainerHeader = () => (
   <Container.Header
     title={"Build your own PC"}
-    action={<Button size={"large"}>Create New</Button>}
+    action={
+      <Button size={"large"} appearance="primary">
+        Create New
+      </Button>
+    }
   />
 );
 
