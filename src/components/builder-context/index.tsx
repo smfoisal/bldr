@@ -23,6 +23,9 @@ function BuilderProvider({ children }: BuilderProps) {
   const [builds, setBuilds] = useState<IBuildDetails[]>([]);
   const [activeBuildIndex, setActiveBuildIndex] = useState<number>(0);
 
+  /**
+   *
+   */
   function addNewBuild(build: IBuildDetails): void {
     setBuilds([...builds, build]);
   }

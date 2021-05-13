@@ -2,6 +2,8 @@ import Header from "./header";
 import { Pane } from "evergreen-ui";
 import { BuilderProvider } from "./builder-context";
 import { Container } from "./root";
+import BuildList from "./build-list";
+import PCBuilder from "./pc-builder";
 
 export const App = () => (
   <Pane
@@ -13,7 +15,21 @@ export const App = () => (
   >
     <Header />
     <BuilderProvider>
-      <Container paddingY>asdasdasd</Container>
+      <Container paddingY>
+        <Container.Row>
+          <Pane
+            display="flex"
+            flexDirection={"column"}
+            width={"20%"}
+            paddingRight={20}
+          >
+            <BuildList />
+          </Pane>
+          <Pane display="flex" flexDirection={"column"} width={"80%"}>
+            <PCBuilder />
+          </Pane>
+        </Container.Row>
+      </Container>
     </BuilderProvider>
   </Pane>
 );
